@@ -26,8 +26,10 @@ docker run -p 8192:8192 -it my_app
 
 ## fly.io
 - Install CLI: brew install flyctl
-- Init existing app (first deploy): fly launch --now
-- Update: fly deploy
+- Init existing app (first deploy): 
+    - fly launch --now
+- Update: 
+    - fly deploy
 
 
 
