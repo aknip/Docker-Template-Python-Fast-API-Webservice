@@ -3,7 +3,7 @@ tasks:
     init: > 
         docker-compose up &&
         gp sync-done initSetup
-    command: gp open README.md && marimo edit
+    command: gp open README.md && ls
   
     #command: gp open README.md && gp open CrewAi.ipynb && marimo edit hello-world-marimo.py
 
