@@ -1,15 +1,15 @@
-# fly.toml app configuration file generated for docker-template-python-fast-api-webservice on 2025-02-06T11:27:19+01:00
+# fly.toml app configuration file generated for docker-template-python-fast-api-webservice on 2025-02-07T08:20:13+01:00
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
 app = 'docker-template-python-fast-api-webservice'
-primary_region = 'ams'
+primary_region = 'fra'
 
 [build]
 
 [http_service]
-  internal_port = 80
+  internal_port = 8000
   force_https = true
   auto_stop_machines = 'stop'
   auto_start_machines = true

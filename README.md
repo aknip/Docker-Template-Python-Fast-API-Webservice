@@ -1,9 +1,24 @@
-# Docker
-
-!
+# uv-docker-example
 
 ## Run in Gitpod
 https://gitpod.io/#https://github.com/aknip/Docker-Template-Python-Fast-API-Webservice
+
+
+1. create/initialize UV project in folder "src"
+docker compose -f docker/compose.yaml run --rm uv-example uv init --no-readme
+
+2. Rename hello.py to main.py
+
+3. Add dependencies in the pyproject.toml
+
+4. lock the dependencies into the uv.lock
+docker compose -f docker/compose.yaml run --rm uv-example uv lock
+
+5. Rebuild container
+
+Tests:
+docker-compose run fastapi pytest /home/uv-example-user/src/tests
+docker-compose run --rm fastapi uvx ruff check --fix
 
 
 ## Run in local Docker
@@ -21,7 +36,7 @@ Examples:
 
 ## Docker
 docker build -t my_app .
-docker run -p 8192:8192 -it my_app
+docker run -p 8000:8000 -it my_app
 
 
 ## fly.io
@@ -40,5 +55,8 @@ docker run -p 8192:8192 -it my_app
 - https://medium.com/@abderraoufbenchoubane/setup-a-python-environment-with-docker-a4e38811e0d3
 - https://github.com/Abderraouf99/medium-article-source-code/tree/main/docker-env
 
-
-
+- https://medium.com/@shaliamekh/python-package-management-with-uv-for-dockerized-environments-f3d727795044
+- https://github.com/shaliamekh/uv-docker-example
+- additional infos about uv in Docker:
+    - https://hynek.me/articles/docker-uv/
+    - https://daniel-mannino.medium.com/better-python-programming-with-dev-containers-uv-and-ruff-a56ed7172d9e
