@@ -1,7 +1,7 @@
 tasks:
   - name: Setup
     init: > 
-        docker-compose up &&
+        make build run enter &&
         gp sync-done initSetup
     command: gp open README.md && ls
   

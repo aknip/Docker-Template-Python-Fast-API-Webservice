@@ -1,9 +1,20 @@
 # uv-docker-example
 
-## Run in Gitpod
+Folder src can be edited live
+
+## Start (Gitpod)
 https://gitpod.io/#https://github.com/aknip/Docker-Template-Python-Fast-API-Webservice
 
+## Start (local docker)
+make build run
+make build run enter
 
+## Start (local docker compose)
+docker-compose up --build
+
+
+
+## Code init
 1. create/initialize UV project in folder "src"
 docker compose -f docker/compose.yaml run --rm uv-example uv init --no-readme
 
@@ -21,10 +32,6 @@ docker-compose run fastapi pytest /home/uv-example-user/src/tests
 docker-compose run --rm fastapi uvx ruff check --fix
 
 
-## Run in local Docker
-docker-compose up --build
-Folder src can be edited 
-
 ### Execute commands inside Docker
 - Use `run` for a single one-off execution and starting a container.
 - Use `exec` for executing a command in a running container.
@@ -33,6 +40,8 @@ Examples:
 - docker-compose run fastapi python3 --version
 - docker-compose exec fastapi bash
 - docker-compose exec fastapi python src/marimoapp.py
+
+- docker exec -it fastapi-app bash
 
 ## Docker
 docker build -t my_app .
